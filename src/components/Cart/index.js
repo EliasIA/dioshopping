@@ -2,6 +2,7 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import cartActions from '../store/actions/cart';
 
+
 const Cart = () => {
     const cart = useSelector(state => state.cart)
     const dispatch = useDispatch();
@@ -24,6 +25,12 @@ const Cart = () => {
                     {cart.value}
                 </span>
             </button>
+            
+            
+            <div className="SearchInput">
+                <input type="text" id="txtBusca" placeholder="Buscar..."/>
+               
+            </div>
 
             {/* Modal */}
             <div className="modal fade" id="CartModal" tabIndex="-1" aria-labelledby="CartModalLabel" aria-hidden="true">
